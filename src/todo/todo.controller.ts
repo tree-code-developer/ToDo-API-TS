@@ -9,26 +9,26 @@ export class TodoController {
 
   @Post()
   create(@Body() createTodoDto: CreateTodoDto) {
-    return this.todoService.create(createTodoDto);
+    return this.todoService.createTodo(createTodoDto);
   }
 
   @Get()
   findAll() {
-    return this.todoService.findAll();
+    return this.todoService.findAllTodo();
   }
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.todoService.findOne(+id);
+    return this.todoService.findTodo(+id);
   }
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateTodoDto: UpdateTodoDto) {
-    return this.todoService.update(+id, updateTodoDto);
+    return this.todoService.updateTodo(+id, updateTodoDto);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.todoService.remove(+id);
+    return this.todoService.removeTodo(+id);
   }
 }
