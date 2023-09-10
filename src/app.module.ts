@@ -4,7 +4,6 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TodoModule } from './todo/todo.module';
 import { Todo } from './todo/entities/todo.entity';
-import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -20,7 +19,6 @@ import { AuthModule } from './auth/auth.module';
         logging: true,
       }),
       TodoModule,
-      AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
