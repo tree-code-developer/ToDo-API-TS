@@ -18,7 +18,7 @@ config();
         username: process.env.POSTGRES_USER,
         database: process.env.POSTGRES_DATABASE,
         entities: [Todo],
-        logging: true,
+        synchronize: true,
         ssl: true,
       }),
       TodoModule,
